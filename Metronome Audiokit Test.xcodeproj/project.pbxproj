@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,9 @@
 		F1372A8F2577D261006D5026 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1372A8E2577D261006D5026 /* ContentView.swift */; };
 		F1372A912577D269006D5026 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1372A902577D269006D5026 /* Assets.xcassets */; };
 		F1372A942577D269006D5026 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1372A932577D269006D5026 /* Preview Assets.xcassets */; };
+		F1372A9E2577D381006D5026 /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = F1372A9D2577D381006D5026 /* AudioKit */; };
+		F1372AA22577D3B7006D5026 /* 4tracks.mid in Resources */ = {isa = PBXBuildFile; fileRef = F1372AA12577D3B7006D5026 /* 4tracks.mid */; };
+		F1372AA52577D3CE006D5026 /* metronome.wav in Resources */ = {isa = PBXBuildFile; fileRef = F1372AA42577D3CE006D5026 /* metronome.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,8 @@
 		F1372A902577D269006D5026 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1372A932577D269006D5026 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F1372A952577D269006D5026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1372AA12577D3B7006D5026 /* 4tracks.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; path = 4tracks.mid; sourceTree = "<group>"; };
+		F1372AA42577D3CE006D5026 /* metronome.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = metronome.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1372A9E2577D381006D5026 /* AudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +58,8 @@
 		F1372A8B2577D261006D5026 /* Metronome Audiokit Test */ = {
 			isa = PBXGroup;
 			children = (
+				F1372AA42577D3CE006D5026 /* metronome.wav */,
+				F1372AA02577D39E006D5026 /* Resources */,
 				F1372A8C2577D261006D5026 /* Metronome_Audiokit_TestApp.swift */,
 				F1372A8E2577D261006D5026 /* ContentView.swift */,
 				F1372A902577D269006D5026 /* Assets.xcassets */,
@@ -67,6 +75,14 @@
 				F1372A932577D269006D5026 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F1372AA02577D39E006D5026 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F1372AA12577D3B7006D5026 /* 4tracks.mid */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +101,9 @@
 			dependencies = (
 			);
 			name = "Metronome Audiokit Test";
+			packageProductDependencies = (
+				F1372A9D2577D381006D5026 /* AudioKit */,
+			);
 			productName = "Metronome Audiokit Test";
 			productReference = F1372A892577D261006D5026 /* Metronome Audiokit Test.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +131,9 @@
 				Base,
 			);
 			mainGroup = F1372A802577D261006D5026;
+			packageReferences = (
+				F1372A9C2577D381006D5026 /* XCRemoteSwiftPackageReference "AudioKit" */,
+			);
 			productRefGroup = F1372A8A2577D261006D5026 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +148,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1372AA22577D3B7006D5026 /* 4tracks.mid in Resources */,
+				F1372AA52577D3CE006D5026 /* metronome.wav in Resources */,
 				F1372A942577D269006D5026 /* Preview Assets.xcassets in Resources */,
 				F1372A912577D269006D5026 /* Assets.xcassets in Resources */,
 			);
@@ -328,6 +352,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F1372A9C2577D381006D5026 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/audiokit/AudioKit/";
+			requirement = {
+				branch = "v5-main";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F1372A9D2577D381006D5026 /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1372A9C2577D381006D5026 /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F1372A812577D261006D5026 /* Project object */;
 }
